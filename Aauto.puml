@@ -1,0 +1,35 @@
+@startuml aauto
+class Vehiculo {
+  - modelo : String
+  - anio : int
+  - velocidad : double
+  + Vehiculo(modelo : String, anio : int)
+  + acelerar() : void
+  + frenar() : void
+  + obtenerModelo() : String
+  + mostrarDetalles() : void
+}
+class Auto {
+  - puertas : int
+  + Auto(modelo : String, anio : int, puertas : int)
+  + obtenerPuertas() : int
+  + mostrarDetalles() : void
+}
+class AutoDeportivo {
+  - velocidadMaxima : double
+  - turbo : boolean
+  + AutoDeportivo(modelo : String, anio : int, puertas : int, velocidadMaxima : double, turbo : boolean)
+  + activarTurbo() : void
+  + mostrarDetalles() : void
+}
+class Camion {
+  - cargaMaxima : double
+  - remolque : boolean
+  + Camion(modelo : String, anio : int, cargaMaxima : double, remolque : boolean)
+  + cargar() : void
+  + mostrarDetalles() : void
+}
+Vehiculo <|-- Auto
+Vehiculo <|-- Camion
+Auto <|-- AutoDeportivo
+@enduml
