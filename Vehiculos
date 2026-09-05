@@ -1,0 +1,46 @@
+public class Vehiculos{
+    protected String modelo;
+    protected int año;
+    protected double velocidad;
+   
+    public Vehiculo (String modelo, int año){
+        this.modelo=modelo;
+        this.año = año ;
+        this.velocidad = 0.0;
+    }
+
+}
+public void acelerar (){
+    velocidad += 15 ;
+    System.out.println ("Aceleración Actual " +velocidad " km/h");
+}
+public void frenar (){
+    velocidad -= 10 ;
+    if (velocidad <0) velocidad= 0;
+    System.out.println ("Frenación Actual " +velocidad " km/h");
+}
+public void mostrarDetalles (){
+    velocidad = ;
+    System.out.println ("Aceleración Actual " +modelo+ "Año: " + año+ "Velocidad" + velocidad);
+}
+public class Auto extends Vehiculos {
+    protected String modelo;
+    protected int año;
+    protected double velocidad;
+   
+    public Vehiculo (String modelo, int año){
+        this.modelo=modelo;
+        this.año = año ;
+        this.velocidad = 0.0;
+    }
+}
+public class Auto extends Vehiculos {
+    protected int puertas;
+   
+    public Vehiculo (String modelo, int año){
+        this.modelo=modelo;
+        this.año = año ;
+        this.velocidad = 0.0;
+    }
+
+}
